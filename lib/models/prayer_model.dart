@@ -272,4 +272,4 @@ const List<String> prayerNames = [
   'Maghrib',
   'Isha',
 ];
-];
+
