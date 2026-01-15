@@ -7,13 +7,12 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:8.1.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath 'org.flutter.gradle:flutter-gradle-plugin:1.1.0'
     }
 }
 
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'org.flutter.gradle'
+apply from: "$rootDir/../../packages/flutter_tools/gradle/flutter.gradle"
 
 android {
     namespace "com.qadaa.prayer_tracker"
