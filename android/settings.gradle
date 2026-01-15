@@ -1,0 +1,26 @@
+include ':app'
+
+def localPropertiesFile = new File(rootDir.absolutePath + '/local.properties')
+def properties = new Properties()
+
+if (localPropertiesFile.exists()) {
+    properties.load(localPropertiesFile.newDataInputStream())
+}
+
+def flutterSdkPath = properties.getProperty('flutter.sdk')
+if (flutterSdkPath == null || flutterSdkPath.isEmpty()) {
+    throw new GradleException('flutter.sdk not set in local.properties')
+}
+
+def flutterRoot = flutterSdkPath.endsWith(File.separator) ? flutterSdkPath : flutterSdkPath + File.separator
+println "Flutter root: $flutterRoot"
+
+def flutterModuleName = 'flutter'
+def flutterModuleFile = new File("$flutterRoot/../.flutter-plugins")
+if (flutterModuleFile.exists()) {
+    println "Flutter plugins file found"
+}
+
+gradle.ext.flutterRoot = flutterRoot
+gradle.ext.flutterModuleName = flutterModuleName
+gradle.ext.flutterProjectRoot = rootProject.projectDir.getParent()
