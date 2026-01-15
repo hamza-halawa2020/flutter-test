@@ -1,0 +1,88 @@
+name: qadaa_prayer_tracker
+description: A Flutter application for tracking missed prayers (Qadaa prayers) with offline-first functionality, local storage, and backup/restore features.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # State Management
+  provider: ^6.0.0
+
+  # Local Storage
+  sqflite: ^2.3.0
+  path_provider: ^2.1.0
+  
+  # Backup & Restore
+  google_sign_in: ^6.1.0
+  googleapis: ^11.2.0
+  google_drive_api: ^2.0.0
+  
+  # Date & Time
+  intl: ^0.19.0
+  
+  # JSON Serialization
+  json_serializable: ^6.7.0
+  json_annotation: ^4.8.0
+  
+  # UI/UX
+  cupertino_icons: ^1.0.2
+  
+  # File handling
+  file_picker: ^6.0.0
+  share_plus: ^7.0.0
+  
+  # Permissions
+  permission_handler: ^11.4.0
+
+  # Notifications (Feature 1)
+  flutter_local_notifications: ^16.1.0
+
+  # Charts & Analytics (Feature 2)
+  fl_chart: ^0.64.0
+
+  # PDF Export (Feature 9)
+  pdf: ^3.10.0
+  printing: ^5.11.0
+
+  # CSV Export (Feature 9)
+  csv: ^6.0.0
+
+  # Authentication & Security (Feature 5)
+  local_auth: ^2.1.0
+  flutter_secure_storage: ^9.0.0
+
+  # Biometric
+  biometric_storage: ^4.1.0
+
+  # Haptic Feedback (Feature 6)
+  vibration: ^1.9.0
+
+  # Export capabilities
+  path: ^1.8.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_linter: ^3.0.0
+  build_runner: ^2.4.0
+  json_serializable: ^6.7.0
+
+flutter:
+  uses-material-design: true
+
+  # Localization
+  generate: true
+
+  assets:
+    - assets/images/
+    - assets/translations/
