@@ -1,18 +1,8 @@
-buildscript {
-    ext.kotlin_version = '1.8.22'
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
+plugins {
+    id "com.android.application"
+    id "org.jetbrains.kotlin.android"
+    id "dev.flutter.flutter-gradle-plugin"
 }
-
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply from: "$rootDir/../../packages/flutter_tools/gradle/flutter.gradle"
 
 android {
     namespace "com.qadaa.prayer_tracker"
@@ -32,7 +22,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = "1.8"
     }
 
     buildTypes {
@@ -43,5 +33,5 @@ android {
 }
 
 flutter {
-    source '../..'
+    source "../.."
 }
