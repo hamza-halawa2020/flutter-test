@@ -24,7 +24,6 @@ dependencies:
   # Backup & Restore
   google_sign_in: ^6.1.0
   googleapis: ^11.2.0
-  google_drive_api: ^2.0.0
   
   # Date & Time
   intl: ^0.19.0
